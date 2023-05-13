@@ -36,6 +36,8 @@ func CheckLink(link string, c chan string) {
 	defer func(c chan string) {
 		c <- link
 	}(c)
+
+	//http.Get會等待網頁回傳,所以會造成goroutine被block
 	_, err := http.Get(link)
 	if err != nil {
 		c <- link
