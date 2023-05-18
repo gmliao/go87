@@ -16,7 +16,6 @@ func hello(w http.ResponseWriter, req *http.Request) {
 	case <-time.After(10 * time.Second):
 		fmt.Fprintf(w, "hello\n")
 	case <-ctx.Done():
-
 		err := ctx.Err()
 		fmt.Println("server:", err)
 		internalError := http.StatusInternalServerError
@@ -25,7 +24,6 @@ func hello(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
-
 	http.HandleFunc("/hello", hello)
 	http.ListenAndServe(":8090", nil)
 }
