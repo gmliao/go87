@@ -1,6 +1,6 @@
 # Go87 是記錄我自己go的學習歷程
 
-## 這些範例是由以下網站或課程整理
+## 這些範例是由以下網站或課程整理,有些註解或者程式碼是由github copilot生成
 
   https://www.udemy.com/course/go-the-complete-developers-guide/
 
